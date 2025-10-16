@@ -1,0 +1,28 @@
+package com.example.Lab4.entity;
+
+import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
+public class Staff {
+    private String id;
+    private String fullname;
+
+    @Builder.Default
+    private String photo = "photo.jpg";
+    @Builder.Default
+    private boolean gender = true;
+    @Builder.Default
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private Date birthday =new Date();
+    @Builder.Default
+    private double salary = 12345.6789;
+    @Builder.Default
+    private Integer level = 0;
+}

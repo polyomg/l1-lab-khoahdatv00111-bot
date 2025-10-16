@@ -1,0 +1,16 @@
+<!--Bai5-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2> Bai 5 :Danh sách sản phẩm</h2>
+<ul>
+    <th:block th:each="item : ${items}">
+        <li>
+            <span th:text="${item.name}"></span> -
+            <span th:text="${item.price}"></span> |
+            <a th:href="@{'/cart/add/' + ${item.id}}">Add To Cart</a>
+        </li>
+    </th:block>
+</ul>
+</body>
+</html>
